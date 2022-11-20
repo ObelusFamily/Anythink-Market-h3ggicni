@@ -91,25 +91,27 @@ class Profile extends React.Component {
 
   renderTabs() {
     return (
-      <ul className="nav nav-tabs outline-active">
-        <li className="nav-item">
-          <Link
-            className="nav-link active"
-            to={`/@${this.props.profile.username}`}
-          >
-            My Items
-          </Link>
-        </li>
+      <div className="container page">
+        <ul className="nav nav-tabs outline-active">
+          <li className="nav-item">
+            <Link
+              className="nav-link active"
+              to={`/@${this.props.profile.username}`}
+            >
+              My Items
+            </Link>
+          </li>
 
-        <li className="nav-item">
-          <Link
-            className="nav-link"
-            to={`/@${this.props.profile.username}/favorites`}
-          >
-            Favorited Items
-          </Link>
-        </li>
-      </ul>
+          <li className="nav-item">
+            <Link
+              className="nav-link"
+              to={`/@${this.props.profile.username}/favorites`}
+            >
+              Favorited Items
+            </Link>
+          </li>
+        </ul>
+      </div>
     );
   }
 
@@ -125,7 +127,7 @@ class Profile extends React.Component {
 
     return (
       <div className="profile-page">
-        <div className="container">
+        <div className="container page">
           <div className="row p-4 text-center">
             <div className="user-info col-xs-12 col-md-8 offset-md-2">
               <img
